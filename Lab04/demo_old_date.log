@@ -1,0 +1,77 @@
+============================================================
+ Laboratorio 04 - Cliente NTP manual (RFC 5905)
+============================================================
+Reloj interno inicial: 2020-09-01 21:00:17.123 Guatemala (UTC-6) | 2020-09-02 03:00:17.123 UTC
+Servidores configurados (7):
+   1. time.google.com:123
+   2. time.apple.com:123
+   3. time.windows.com:123
+   4. time.cloudflare.com:123
+   5. time.nist.gov:123
+   6. time-a.nist.gov:123
+   7. pool.ntp.org:123
+Umbral de sincronizacion: 500.000 ms
+Intervalo entre verificaciones: 1 s
+Timeout por ronda: 3000 ms
+Maximo de iteraciones: 3
+Formula offset: theta = ((T2 - T1) + (T3 - T4)) / 2
+Formula delay : delta = (T4 - T1) - (T3 - T2)
+
+---------------- Iteracion 1 ----------------
+Reloj interno antes de consultar: 2020-09-01 21:00:17.123 Guatemala (UTC-6) | 2020-09-02 03:00:17.123 UTC
+Enviando solicitudes UDP NTP de 48 bytes al mismo tiempo...
+Respuestas recibidas: 7/7
+
+Servidor                 IP              Stratum  Offset(ms)     Delay(ms)      Estado    
+------------------------ --------------- -------- ----------     ---------      ----------
+time.google.com          216.239.35.0    1        187455248529.608         90.920 OK        
+time.apple.com           17.253.12.37    1        187455248537.019         78.150 OK        
+time.windows.com         40.119.6.228    4        187455248546.397         67.803 OK        
+time.cloudflare.com      162.159.200.123 3        187455248545.804         55.108 OK        
+time.nist.gov            132.163.97.3    1        187455248553.117         93.572 OK        
+time-a.nist.gov          129.6.15.28     1        187455248555.849         78.340 OK        
+pool.ntp.org             23.186.168.129  2        187455248546.504        121.543 OK        
+
+Mejor servidor por menor delay: time.cloudflare.com (162.159.200.123)
+T1 cliente envia     : 2020-09-02 03:00:17.159 UTC
+T2 servidor recibe   : 2026-08-11 17:54:25.732 UTC
+T3 servidor responde : 2026-08-11 17:54:25.732 UTC
+T4 cliente recibe    : 2020-09-02 03:00:17.214 UTC
+Calculo delay  = (T4-T1)-(T3-T2) = 0.055108 s = 55.108 ms
+Calculo offset = ((T2-T1)+(T3-T4))/2 = 187455248.545804 s = 187455248545.804 ms
+Reloj interno DESPUES del ajuste: 2026-08-11 11:54:25.873 Guatemala (UTC-6) | 2026-08-11 17:54:25.873 UTC
+Aun no sincronizado: |offset| 187455248545.804 ms > umbral 500.000 ms
+Esperando 1 segundo(s) para la siguiente verificacion...
+
+---------------- Iteracion 2 ----------------
+Reloj interno antes de consultar: 2026-08-11 11:54:26.873 Guatemala (UTC-6) | 2026-08-11 17:54:26.873 UTC
+Enviando solicitudes UDP NTP de 48 bytes al mismo tiempo...
+Respuestas recibidas: 7/7
+
+Servidor                 IP              Stratum  Offset(ms)     Delay(ms)      Estado    
+------------------------ --------------- -------- ----------     ---------      ----------
+time.google.com          216.239.35.12   1               109.764         56.944 OK        
+time.apple.com           17.253.6.37     1               111.646         60.107 OK        
+time.windows.com         40.119.6.228    4               110.290         69.887 OK        
+time.cloudflare.com      162.159.200.123 3               104.559         30.720 OK        
+time.nist.gov            132.163.97.3    1               110.599         86.025 OK        
+time-a.nist.gov          129.6.15.28     1               113.830         73.507 OK        
+pool.ntp.org             23.186.168.129  2               118.643        153.051 OK        
+
+Mejor servidor por menor delay: time.cloudflare.com (162.159.200.123)
+T1 cliente envia     : 2026-08-11 17:54:26.899 UTC
+T2 servidor recibe   : 2026-08-11 17:54:27.019 UTC
+T3 servidor responde : 2026-08-11 17:54:27.019 UTC
+T4 cliente recibe    : 2026-08-11 17:54:26.930 UTC
+Calculo delay  = (T4-T1)-(T3-T2) = 0.030720 s = 30.720 ms
+Calculo offset = ((T2-T1)+(T3-T4))/2 = 0.104559 s = 104.559 ms
+Reloj interno DESPUES del ajuste: 2026-08-11 11:54:27.179 Guatemala (UTC-6) | 2026-08-11 17:54:27.179 UTC
+
+SINCRONIZADO: |offset| 104.559 ms <= umbral 500.000 ms
+
+============================================================
+ Resultado final
+============================================================
+Reloj interno final: 2026-08-11 11:54:27.179 Guatemala (UTC-6) | 2026-08-11 17:54:27.179 UTC
+Estado: SINCRONIZADO
+Nota: el reloj del sistema operativo NO se modifica; la sincronizacion es simulada en una variable interna.
