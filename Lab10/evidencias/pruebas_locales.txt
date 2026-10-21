@@ -1,14 +1,20 @@
-Fecha: 2026-10-20T20:18:39-06:00
-Comando: /usr/bin/python3 -m unittest -v test_lab10.py
-Codigo de salida: 0
+# Pruebas locales de test_lab10.py
+# Regenerado el 2026-10-20 en Linux 7.2.11-arch1-1
 
+test_block_rejects_invalid_addresses (test_lab10.Lab10Tests.test_block_rejects_invalid_addresses) ... ok
+test_block_simulation_reports_plan_and_touches_no_socket (test_lab10.Lab10Tests.test_block_simulation_reports_plan_and_touches_no_socket) ... ok
+test_deauth_builds_targeted_and_broadcast_variants (test_lab10.Lab10Tests.test_deauth_builds_targeted_and_broadcast_variants) ... ok
+test_deauth_rejects_out_of_range_count (test_lab10.Lab10Tests.test_deauth_rejects_out_of_range_count) ... ok
+test_inject_builds_arpreplay_and_fakeauth_against_given_bssid (test_lab10.Lab10Tests.test_inject_builds_arpreplay_and_fakeauth_against_given_bssid) ... ok
+test_monitor_builds_start_and_stop_without_transmitting (test_lab10.Lab10Tests.test_monitor_builds_start_and_stop_without_transmitting) ... ok
 test_official_sample_recovers_known_key_without_radio (test_lab10.Lab10Tests.test_official_sample_recovers_known_key_without_radio) ... ok
 test_recovery_passes_paths_literally_and_returns_tool_failure (test_lab10.Lab10Tests.test_recovery_passes_paths_literally_and_returns_tool_failure) ... ok
 test_recovery_requires_capture_and_preserves_existing_key (test_lab10.Lab10Tests.test_recovery_requires_capture_and_preserves_existing_key) ... ok
 test_rejects_invalid_radio_parameters (test_lab10.Lab10Tests.test_rejects_invalid_radio_parameters) ... ok
+test_scan_simulation_is_passive_and_creates_no_outputs (test_lab10.Lab10Tests.test_scan_simulation_is_passive_and_creates_no_outputs) ... ok
 test_simulation_does_not_transmit_or_create_outputs (test_lab10.Lab10Tests.test_simulation_does_not_transmit_or_create_outputs) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 1.041s
+Ran 12 tests in 0.863s
 
 OK
