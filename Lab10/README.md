@@ -1,7 +1,7 @@
 # Laboratorio 10 — Captura el Router
 
 Preparación para Ciencias de la Computación VIII (Redes y Protocolos).
-Autores solicitados: **Jose Rivera** y **Erick Mejia**; carnés pendientes.
+Autores solicitados: **Javier Rivera** y **Erick Mejia**; carnés completados.
 
 Para preparar otra laptop desde cero y aprender el procedimiento, consulta
 **[GUIA_LAPTOP.md](GUIA_LAPTOP.md)**. Comienza con la ruta actual para
