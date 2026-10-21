@@ -60,7 +60,7 @@ sha256sum -c evidencias/muestra.sha256
 aircrack-ng -a 1 -b 00:12:BF:12:32:29 muestras/ptw.cap
 ```
 
-La suite tiene cinco pruebas; la de recuperación real se omite explícitamente si
+La suite tiene doce pruebas; la de recuperación real se omite explícitamente si
 no está instalado `aircrack-ng`. Con la herramienta instalada, la salida esperada
 de la muestra es `KEY FOUND! [ 1F:1F:1F:1F:1F ]`. No necesitas `sudo` para recuperar
 una clave desde un archivo. `comprobar` devuelve **1** si falta alguna herramienta
@@ -119,8 +119,33 @@ sudo airmon-ng stop "$MON"
 
 El [informe](informe.pdf) contiene los comandos manuales equivalentes, la ruta
 activa opcional de reinyección ARP sobre el AP autorizado, restauración y
-diagnóstico. Las pruebas activas dependen del alcance fijado por el docente; el
-script no las ejecuta automáticamente ni desconecta a participantes.
+diagnóstico. Las pruebas activas dependen del alcance fijado por el docente.
+
+## Subcomandos de `lab10.py`
+
+| Subcomando | Qué hace |
+|---|---|
+| `comprobar` | diagnóstico local de herramientas y Wi-Fi |
+| `monitor` | activa (`--canal`) o detiene (`--detener`) el modo monitor |
+| `escanear` | lista APs WEP para hallar BSSID/canal |
+| `inyectar` | genera IVs: `--modo arpreplay\|chopchop\|fragment\|fakeauth` |
+| `capturar` | captura pasiva del AP autorizado |
+| `deauth` | desautentica clientes del AP (`--cliente`, `--cantidad`) |
+| `bloquear` | aísla a un host por ARP spoofing (`--objetivo`, `--gateway`) |
+| `recuperar` | recupera la clave WEP de una captura (PTW) |
+
+Todos los subcomandos activos aceptan `--simular`, que valida argumentos y
+muestra el comando **sin ejecutarlo**.
+
+### Fase adversarial (competencia autorizada)
+
+Los subcomandos `deauth`, `bloquear` y la inyección activa degradan la captura de
+otros participantes o los aíslan de la red. **Están pensados exclusivamente para
+el entorno autorizado por el docente**: red aislada, solo los participantes del
+laboratorio, sobre el router WEP de la práctica. `deauth` desconecta clientes y
+`bloquear` deniega acceso; úsalos solo bajo ese alcance. La estrategia, los
+comandos y —lo que el enunciado califica— **cómo detectarlos y mitigarlos** están
+en [estrategia_adversarial.md](estrategia_adversarial.md).
 
 ## Evidencia y entrega
 
