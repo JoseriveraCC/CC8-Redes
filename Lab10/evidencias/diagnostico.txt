@@ -1,0 +1,12 @@
+Fecha: 2026-10-20T20:18:39-06:00
+Comando: /usr/bin/python3 lab10.py comprobar
+Codigo de salida: 1
+
+Sistema: Linux-6.18.54.1-microsoft-standard-WSL2-x86_64-with-glibc2.43
+airmon-ng: /usr/sbin/airmon-ng
+airodump-ng: /usr/sbin/airodump-ng
+aireplay-ng: /usr/sbin/aireplay-ng
+aircrack-ng: /usr/bin/aircrack-ng
+iw: /usr/sbin/iw
+Interfaces Wi-Fi visibles: ninguna detectada
+Modo monitor e inyección: requieren comprobar el adaptador físico en Linux.

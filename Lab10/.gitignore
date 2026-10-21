@@ -1,0 +1,6 @@
+# codex-workflow-managed-start
+.codex_workflow_hidden_resources/
+# codex-workflow-managed-end
+
+__pycache__/
+capturas/

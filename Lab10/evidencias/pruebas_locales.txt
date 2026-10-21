@@ -1,0 +1,14 @@
+Fecha: 2026-10-20T20:18:39-06:00
+Comando: /usr/bin/python3 -m unittest -v test_lab10.py
+Codigo de salida: 0
+
+test_official_sample_recovers_known_key_without_radio (test_lab10.Lab10Tests.test_official_sample_recovers_known_key_without_radio) ... ok
+test_recovery_passes_paths_literally_and_returns_tool_failure (test_lab10.Lab10Tests.test_recovery_passes_paths_literally_and_returns_tool_failure) ... ok
+test_recovery_requires_capture_and_preserves_existing_key (test_lab10.Lab10Tests.test_recovery_requires_capture_and_preserves_existing_key) ... ok
+test_rejects_invalid_radio_parameters (test_lab10.Lab10Tests.test_rejects_invalid_radio_parameters) ... ok
+test_simulation_does_not_transmit_or_create_outputs (test_lab10.Lab10Tests.test_simulation_does_not_transmit_or_create_outputs) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.041s
+
+OK
